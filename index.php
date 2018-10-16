@@ -18,6 +18,9 @@
 		</div>
 	</main>
 	<div class="chat-show "></div>
+
+	<canvas id="myCanvas" class="myCanvas" width="800" height="600"></canvas>
+	
 	<script src='js/socket.io.min.js'></script>
 	<script src='js/main.js'></script>
 	

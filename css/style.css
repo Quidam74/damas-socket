@@ -9,6 +9,8 @@ p{
 	bottom: 0px;
 	right: 30px;
 	display: flex;
+	background-color: white;
+	z-index: 50;
 	
 }
 .chat-sidePanel{
@@ -106,4 +108,13 @@ p{
 
 .poked{
 	background-color: red;
+}
+
+body{
+	margin: 0px;
+}
+.myCanvas{
+
+
+	border: solid 1px black;
 }
