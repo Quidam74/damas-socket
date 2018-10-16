@@ -8,6 +8,17 @@ p{
 	position: fixed;
 	bottom: 0px;
 	right: 30px;
+	display: flex;
+	
+}
+.chat-sidePanel{
+	overflow-y: scroll;
+	width: 100px;
+	min-height: 100%;
+	margin:10px;
+	border-right: solid 1px black;
+}
+.chat-inner{
 	height: 50vh;
 	width: 400px;
 	display: flex;
@@ -76,4 +87,23 @@ p{
 
 .hide{
 	display: none;
+}
+
+.chat-show{
+	position: fixed;
+	width: 30px;
+	height: 30px;
+	background-color: red;
+	bottom: 0px;
+	right: 30px;
+}
+
+.canPokeThem{
+	text-align: center;
+	padding: 5px;
+
+}
+
+.poked{
+	background-color: red;
 }
