@@ -15,23 +15,9 @@
  }
 
 
- function displayListPoke(){
- 	var sidePanel = document.querySelector(".chat-sidePanel")
-
-
- 	
- 	document.querySelectorAll(".canPokeThem").forEach(function(element) {
- 		element.addEventListener("click",function(elem){
- 			socket.emit("poke",{ pseudo:monPseudo,recipient:elem.currentTarget.innerHTML})
-
- 		})
- 	});
-
-
- }
  function listenMessage(){
  	socket.on("message",function(lettre){
- 		displayListPoke()
+
  		var message = lettre.text
  		var pseudo =lettre.pseudo
 
@@ -44,12 +30,13 @@
  		var divUnMessage ="<div class='"+classPseudo+"'>"+"<p class='unMessage-pseudo'>"+pseudo+":</p>"+"<p>"+message+"</p class='unMessage-message'>"+"</div>"
  		document.querySelector(".chat-fenetre").innerHTML += divUnMessage
  		listeConnecter(pseudo,message)
+
  	})
  }
  function listenpoke(){
  	socket.on("poke",function(poke){
  		document.querySelector("."+poke.pseudo).classList.add("poked")
- 		
+ 		console.log(poke)
 
  	})
  }
@@ -63,11 +50,19 @@
 
  	if(!existe)
  		{		personneInChat.push(pseudo)
- 			var thingToPrepend = "<p class='canPokeThem "+pseudo+"'> "+pseudo+"</p>"
- 			 document.querySelector(".chat-sidePanel").innerHTML += thingToPrepend
+ 			var thingToPrepend = "<p class='canPokeThem "+pseudo.replace(" ","_")+"'> "+pseudo+"</p>"
+ 			document.querySelector(".chat-sidePanel").innerHTML += thingToPrepend
+
+ 			document.querySelector("."+pseudo.replace(" ","_")).addEventListener("click",function(elem){
+ 				console.log(elem.currentTarget.innerHTML)
+ 				socket.emit("poke",{ pseudo:monPseudo,recipient:elem.currentTarget.innerHTML})
+
+ 			})
  			
  		}
+ 		
 
+ 		
  	}
 
 
