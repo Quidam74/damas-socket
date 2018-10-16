@@ -1,10 +1,15 @@
+p{
+	margin: 0px;
+	padding: 0px;
+}
+
 .chat{
 	border:1px solid black;
 	position: fixed;
 	bottom: 0px;
 	right: 30px;
 	height: 50vh;
-	width: 20vw;
+	width: 400px;
 	display: flex;
 	padding: 10px;
 	flex-direction: column;
@@ -12,16 +17,63 @@
 
 .chat-titre{
 	font-size: 30px;
-	border-bottom:1px solid black;
 	text-align: center;
+	margin: auto;
 
 }
+
+
+.chat-header{
+	padding-bottom: 20px; 
+	border-bottom:1px solid black;
+	display: flex;
+}
+.chat-close{
+	width: 30px;
+	height: 30px;
+	background-color: red;
+}
+
+.chat-form{
+	display: flex;
+	margin-top: 10px;
+}
+.chat-input{
+	width: 100%;
+
+	
+}
+.chat-pseudo{
+	width: 80px;
+	margin-right: 10px;
+}
+
+
 .chat-fenetre{
+	display: flex;
+	flex-direction: column;
 	width: auto;
 	height: 100%;
 	border-bottom: 1px solid black;
+	overflow-y: scroll;
 }
 
-.chat-input{
-	margin-top: 20px;
+.chatFenetre-unMessage{
+	min-height: 30px;
+	margin-left: auto; 
+	display: flex;
+	padding: 5px;
+}
+
+.unMessage-pseudo{
+	margin-right: 10px;
+}
+
+.mon-pseudo{
+	margin-left: 0px; 
+}
+
+
+.hide{
+	display: none;
 }

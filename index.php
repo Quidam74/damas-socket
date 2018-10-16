@@ -7,13 +7,13 @@
 </head>
 <body>
 
-<main class="chat">
-	<h1 class="chat-titre">Mon chat génial</h1>
-	<div class="chat-fenetre"></div>
-	<input class="chat-input" type="text" name="message">
-</main>
-
-	<script src='js/main.js'></script>
+	<main class="chat">
+		<header class="chat-header"><h1 class="chat-titre">Mon chat génial</h1><div class="chat-close"></div></header>
+		<div class="chat-fenetre"></div>
+		<div class="chat-form"><input class="chat-pseudo" type="text" name="pseudo" value="Quidam"><input id="chat-sendingMessage" class="chat-input" type="text" name="message"></div>
+	</main>
 	<script src='js/socket.io.min.js'></script>
+	<script src='js/main.js'></script>
+	
 </body>
 </html>
