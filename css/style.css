@@ -1,0 +1,27 @@
+.chat{
+	border:1px solid black;
+	position: fixed;
+	bottom: 0px;
+	right: 30px;
+	height: 50vh;
+	width: 20vw;
+	display: flex;
+	padding: 10px;
+	flex-direction: column;
+}
+
+.chat-titre{
+	font-size: 30px;
+	border-bottom:1px solid black;
+	text-align: center;
+
+}
+.chat-fenetre{
+	width: auto;
+	height: 100%;
+	border-bottom: 1px solid black;
+}
+
+.chat-input{
+	margin-top: 20px;
+}
